@@ -1,24 +1,47 @@
-import logo from "./logo.svg";
+import React from "react";
+import { Button, Accordion, Alert } from "react-bootstrap";
 import "./App.css";
-import Saludar from "./components/Saludar";
 
 function App() {
-  const user = {
-    nombre: "Albert Sarda",
-    edad: 32,
-    color: "verde",
-  };
-
-  const saludarFn = (nombre, edad) => {
-    // console.log("Hola " + nombre + " tiene " + edad + " años");
-    console.log(`Hola ${nombre}, tiene ${edad} años.`);
-  };
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Saludar userInfo={user} saludarFn={saludarFn} />
-      </header>
+      <h1>React Bootstrap </h1>
+      <Button variant="success m-5" size="lg" onClick={console.log("Hola")}>
+        Click
+      </Button>
+      <Alert variant="success">
+        <Alert.Heading>Hey, nice to see you</Alert.Heading>
+        <p>
+          Aww yeah, you successfully read this important alert message. This
+          example text is going to run a bit longer so that you can see how
+          spacing within an alert works with this kind of content.
+        </p>
+        <hr />
+        <p className="mb-0">
+          Whenever you need to, be sure to use margin utilities to keep things
+          nice and tidy.
+        </p>
+      </Alert>
+      <Accordion defaultActiveKey="0">
+        <Accordion.Item eventKey="0">
+          <Accordion.Header>Abrir</Accordion.Header>
+          <Accordion.Body>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequ
+          </Accordion.Body>
+        </Accordion.Item>
+        <Accordion.Item eventKey="1">
+          <Accordion.Header>Segundo Acordeon</Accordion.Header>
+          <Accordion.Body>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commo
+          </Accordion.Body>
+        </Accordion.Item>
+      </Accordion>
     </div>
   );
 }
