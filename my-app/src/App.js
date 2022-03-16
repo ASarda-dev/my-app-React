@@ -9,8 +9,9 @@ function App() {
     color: "verde",
   };
 
-  const saludarFn = (name) => {
-    console.log("Hola " + name);
+  const saludarFn = (nombre, edad) => {
+    // console.log("Hola " + nombre + " tiene " + edad + " años");
+    console.log(`Hola ${nombre}, tiene ${edad} años.`);
   };
   return (
     <div className="App">
