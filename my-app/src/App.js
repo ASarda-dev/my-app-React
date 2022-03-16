@@ -11,8 +11,8 @@ function App() {
   return (
     <div className="App">
       <h1>Mi primer Componente</h1>
-      <Saludar nombre="Albert" apellidos="Sarda" />
-      <Saludar nombre="Eva" apellidos="Garcia" />
+      <Saludar nombre="Albert" apellidos="Sarda" enviarSaludo={enviarSaludo} />
+      <Saludar nombre="Eva" apellidos="Garcia" enviarSaludo={enviarSaludo} />
     </div>
   );
 }
