@@ -8,12 +8,15 @@ function App() {
     edad: 32,
     color: "verde",
   };
+
+  const saludarFn = (name) => {
+    console.log("Hola " + name);
+  };
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <Saludar userInfo={user} />
-        {/* <Saludar name="Eva Garcia" edad="34" /> */}
+        <Saludar userInfo={user} saludarFn={saludarFn} />
       </header>
     </div>
   );
