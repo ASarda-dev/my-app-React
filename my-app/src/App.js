@@ -1,11 +1,32 @@
 import React from "react";
-import { Button, Accordion, Alert } from "react-bootstrap";
+import { Button, Accordion, Alert, Nav } from "react-bootstrap";
+import { ReactComponent as ReactIcon } from "./assets/react.svg";
 import "./App.css";
 
 function App() {
   return (
     <div className="App">
       <h1>React Bootstrap </h1>
+      <ReactIcon></ReactIcon>
+      <Nav
+        activeKey="/home"
+        onSelect={(selectedKey) => alert(`selected ${selectedKey}`)}
+      >
+        <Nav.Item>
+          <Nav.Link href="/home">Active</Nav.Link>
+        </Nav.Item>
+        <Nav.Item>
+          <Nav.Link eventKey="link-1">Link</Nav.Link>
+        </Nav.Item>
+        <Nav.Item>
+          <Nav.Link eventKey="link-2">Link</Nav.Link>
+        </Nav.Item>
+        <Nav.Item>
+          <Nav.Link eventKey="disabled" disabled>
+            Disabled
+          </Nav.Link>
+        </Nav.Item>
+      </Nav>
       <Button variant="success m-5" size="lg" onClick={console.log("Hola")}>
         Click
       </Button>
