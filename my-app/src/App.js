@@ -7,7 +7,9 @@ import "./App.css";
 function App() {
   const [stateCar, setStateCar] = useState(false);
   const encenderApagar = () => {
-    console.log("Comproba si funciona el boton");
+    // console.log("Comproba si funciona el boton");
+    // setStateCar(!stateCar);
+    setStateCar((prevValue) => !prevValue);
   };
   return (
     <div className="App">
@@ -15,10 +17,11 @@ function App() {
       {/* <ReactIcon></ReactIcon> */}
 
       <header>
-        <h3>El coche esta : Encendido </h3>
+        <h3>El coche esta : {stateCar ? "Encendido" : " Apagado"} </h3>
         <Button variant="success m-5" size="lg" onClick={encenderApagar}>
           Encender/Apagar
         </Button>
+        <h3>El coche lo podras : {stateCar ? "Arrancar" : " Parar"} </h3>
       </header>
     </div>
   );
